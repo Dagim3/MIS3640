@@ -4,13 +4,13 @@ print(1+1)
 print((42*60)+42)
 print(10/1.61)
 print((10/1.61)/((42*60)+42))
-
+print (" ")
 print('September 5 - Excercise 1')
 print((4/3)*3.14*(5*5*5))
 print (((24.95*60)+3+(.75*59))) 
 print ((((8.15*1)+(7.12*3)+(8.15*1)+652)/100)+.4)
 print (89-82)
-
+print (" ")
 print('September 7 - Excercise 1,2,3')
 a = 3
 print (a + 2)
@@ -30,7 +30,7 @@ print (not(4 > 3 and 100 > 6))
 import time
 print (time.time())
 1437746094.5735958
-
+print (" ")
 print ('Practice')
 first_name = 'Dagim'
 last_name = 'Girma'
