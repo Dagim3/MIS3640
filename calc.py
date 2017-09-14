@@ -30,3 +30,21 @@ print (not(4 > 3 and 100 > 6))
 import time
 print (time.time())
 1437746094.5735958
+print (" ")
+print('September 12 - Excercise 1,2,3')
+
+import math
+
+a,b,c = input(2,3,5)
+
+d = b**2-4*a*c # discriminant
+
+if d < 0:
+    print ("This equation has no real solution")
+elif d == 0:
+    x = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
+    print ("This equation has one solutions: ", x)
+else:
+    x1 = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
+    x2 = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
+    print ("This equation has two solutions: ", x1, " and", x2)

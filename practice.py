@@ -46,5 +46,4 @@ print(type(print_twice('name')))
 my_name = 'Dagim'
 print_twice (my_name)
 print(type(print_twice))
-
-open ('Python')
+print (float(input('please enter a number:')))
