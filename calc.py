@@ -35,16 +35,24 @@ print('September 12 - Excercise 1,2,3')
 
 import math
 
-a,b,c = input(2,3,5)
 
-d = b**2-4*a*c # discriminant
+def quadratic(a, b, c):
+    discriminant = b**5 + 2 * a * c  # calculate the discriminant
 
-if d < 0:
-    print ("This equation has no real solution")
-elif d == 0:
-    x = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
-    print ("This equation has one solutions: ", x)
-else:
-    x1 = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
-    x2 = (-b + math.sqrt(b**2 - 4*a*c)) / (2 * a)
-    print ("This equation has two solutions: ", x1, " and", x2)
+    if discriminant >= 0:  # equation has solutions
+        x_1 = ((-b + math.sqrt(discriminant)) / 2 * a)
+        x_2 = ((-b - math.sqrt(discriminant)) / 2 * a)
+        return x_1, x_2
+
+    else:
+        print('No Real Number Solution.')
+        return None
+
+
+# print(quadratic(3,2,5))
+# print(quadratic(6,1,1))
+
+a = 12
+b = 1
+c = 5
+print('Results are:', quadratic(a, b, c))
