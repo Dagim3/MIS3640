@@ -1,22 +1,45 @@
-import turtle
-import math
+from turtle import *
+import time
 
-practice = turtle.Turtle()
-print practice
 
-    def polygon(t, length, n): 
-    for i in range (n):
-        t.fd(length)
-        t.lt(360/n)
-        
-polygon (practice, 12, 15)
+def main():
+    reset()
+    shape("circle")
+    resizemode("user")
 
-import math
-def yingyang(t, r): 
-   circumference = 2 * math.pi * r
+    pu(); bk(24*18/6.283); rt(90); pd()
+    tilt(45)
 
-   n= 50
-   length = circumference / n
-   polygon (t,length, n)
-        
-yingyang(alex, 20)
+    pu()
+
+    turtlesize(16,10,5)
+    color("black", "white")
+    for i in range(18):
+        fd(24)
+        lt(20)
+        stamp()
+    color("black", "black")
+    for i in range(18):
+        fd(24)
+        lt(20)
+        stamp()
+
+    tilt(-15)
+    turtlesize(3, 1, 4)
+    color("black", "white")
+    for i in range(17):
+        fd(24)
+        lt(20)
+        if i%2 == 0:
+            stamp()
+    time.sleep(1)
+    while undobufferentries():
+        undo()
+    ht()
+    write("Get Baked!", align="center", font=("Courier", 18, "bold"))
+    return "Done!"
+
+if __name__=="__main__":
+    msg = main()
+    print (msg)
+    mainloop()
