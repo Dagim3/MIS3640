@@ -5,7 +5,6 @@ for i in range (4):
     print (i)
 
 
-
 alex = turtle.Turtle()
 print (alex)
 
