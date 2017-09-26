@@ -8,7 +8,7 @@ def crazy_about_9(a, b):
         return True
     elif b == 9:
         return True
-    elif abs (a - b) == 9:
+    elif abs (a - b) == 9 or abs (a+b) == 9:
         return True
     else:
         return False
@@ -51,14 +51,11 @@ Question 3:
 Write a function with loops that computes The sum of all squares between
 1 and n (inclusive).
 """
-
-
-def sum_squares(n):
+def sum_squaress(n):
     for squares in range(1,n):
-        return (n^2)+((n+1)^2)
+        return sum(range(1, n+1)) ** 2
     if n==1:
         return 1
-
-
-print(sum_squares(1))
-print(sum_squares(100))
+  
+print(sum_squaress(1))
+print(sum_squaress(100))
