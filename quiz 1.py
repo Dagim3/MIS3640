@@ -8,7 +8,7 @@ def crazy_about_9(a, b):
         return True
     elif b == 9:
         return True
-    elif abs (a - b) == 9 or abs (a+b) == 9:
+    elif abs (a - b) == 9 or a+b == 9:
         return True
     else:
         return False
@@ -33,10 +33,14 @@ years (for example, 2000).
 
 
 def leap_year(year):
-    if year % 4 and year % 400:
-        return ('False')
-    else:
+    if year % 400 == 0:
         return "leap_year"
+    elif year % 100 == 0:
+        return ('False')
+    if year % 4 == 0:
+        return ('leap_year')
+    else:
+        return "False"
 
 
 print(leap_year(1900))
