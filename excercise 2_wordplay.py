@@ -10,6 +10,8 @@ words = [word for word in word_list if is_abecedarian(word)]
 print ("There are {} abecedarian words.".format(len(words)))
 
 def rec_abecedarian(word):
+    i= 0
+    word = 0    
     if len(word) <= 1:
         return True
     if word[0] > word[1]:
@@ -17,7 +19,7 @@ def rec_abecedarian(word):
     return rec_abecedarian(word[1:10])
 
 
-rec_abecedarian(word_list)
+rec_abecedarian(word)
 
 
 def loop_abecedarian(word):
