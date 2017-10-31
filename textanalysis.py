@@ -38,15 +38,6 @@ def words(book):
             pass
     return list_
     
-def clean(word):
-    result = ''
-    for letter in word:
-        if (letter in whitespace) or (letter in punctuation):
-            pass
-        else:
-            result += letter.lower()
-    return result
-
 def histogram(data):
     hist = {}
     for word in data:
@@ -134,7 +125,7 @@ def checkForWords(file):
                     print ("The word " + word + " is not in the dictionary")
                     break
 
-checkForWords(open('mobydick.txt'))
+#checkForWords(open('mobydick.txt'))
 
 print('  ')
 print('Excercise 5')
